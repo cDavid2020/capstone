@@ -27,4 +27,11 @@ const people = faker.helpers.times(100, (n) => {
 });
 console.log(people);
 
-console.log(people);
+////////////////////////////////////////////////////////
+// Recruiter software React todo list
+
+import React from "react";
+import ReactDOM from "react-dom";
+import RecruiterTodoList from "./RecruiterTodoList";
+
+ReactDOM.render(<RecruiterTodoList />, document.getElementById("root"));
