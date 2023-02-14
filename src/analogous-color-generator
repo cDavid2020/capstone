@@ -1,6 +1,6 @@
 // import tinycolor from "tinycolor2";
 
-// blocker - how to generate a random color without user input?
+// blocker - how to generate a random color without asking the user for a color. Create an onClick event listener to a button that generates random color sets.
 
 import tinycolor from "tinycolor2";
 var color = tinycolor("red");
