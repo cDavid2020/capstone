@@ -17,18 +17,16 @@ const userRoute = require("./routes/User");
 //   console.log("Server running on port 3005");
 append.use(userRoute, "/user"); // whaterver is write will be executable at localhost:3005/user. Making a POST request to localhost:3005/
 
+//////
+
+/*
+Changed the variable name 'app.listen' to 'append.listen' to avoid confusion with the 'app' variable in the 'express' module
+
+app.listen(3005, () => {
+  console.log("Server running on port 3005");
+});)
+ */
+
 append.listen(3005, () => {
   console.log("Server running on port 3005");
 });
-
-///////
-
-// Pedrotech
-
-const express = require("express");
-
-const app = express();
-
-app.listen(3005, (( => {
-  console.log("Server running on port 3005");
-});)
