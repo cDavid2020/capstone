@@ -12,7 +12,6 @@ const people = faker.helpers.times(100, (n) => {
   return {
     employeeId: n + 1,
     name: {
-      first: faker.name.firstName(),
       middle: faker.name.firstName(),
       last: faker.name.lastName(),
     },

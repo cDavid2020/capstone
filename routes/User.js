@@ -1,6 +1,12 @@
 // User.js is used to CRUD define what you can do with a user
 
 const express = require("express");
+const router = express.Router();
+
+// usually you would do
+router.post("/");
+
+////////////////
 
 const app = express();
 
