@@ -4,9 +4,13 @@ const express = require("express");
 const router = express.Router();
 
 // usually you would do
-router.post("/");
+router.post("/", (req, res) => {
+  res.send("You just created a user");
+});
 
-////////////////
+module.exports = router; // export the router
+
+///////////////////////
 
 const app = express();
 
