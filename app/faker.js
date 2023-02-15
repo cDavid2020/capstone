@@ -1,10 +1,3 @@
-
-
-
-
-Should the above code 👆 be on the same document as 👇 this code. If the code above belongs in 'index.js' then where does the code below go? what should the file name be called *.js?
-
-
 import { faker } from "@faker-js/faker";
 import { promises as fs } from "fs";
 
