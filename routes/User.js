@@ -1,29 +1,24 @@
+// All the REQUESTS are made in the 'routes' folder
+
 // User.js is used to CRUD define what you can do with a user
 
 const express = require("express");
 const router = express.Router();
 
-// usually you would do
-router.get("/", (req, res) => {
-  res.send("You just created a user");
-});
+const controller = require("../controllers/UserController");
+
+// import the controller created
+
+router.get("/", controller.get);
 
 module.exports = router; // export the router
 
 /// ////////////////////
 
-const app = express();
-
 /*
 V1 CODE: const { append } = require("express/lib/response");
 const router = express.Router();
  */
-
-app.listen(3005, () => {
-  console.log("Server running on port 3005");
-});
-
-// usually post request to create a user you would do
 
 // Initiate the route
 const userRoute = require("./routes/User");
