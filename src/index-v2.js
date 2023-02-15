@@ -1,3 +1,16 @@
+// Usage folder only has object arrays?? - https://fakerjs.dev/guide/usage.html
+import { faker } from "@faker-js/faker";
+  return {
+id
+avatar
+fullname
+
+
+
+  }
+const createFakeUser = () => ({
+
+
 // CODE V1: export const add2Nums = (num1, num2) => num1 + num2;
 const express = require("express");
 const app = express();
