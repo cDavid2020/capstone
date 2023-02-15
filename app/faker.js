@@ -1,27 +1,22 @@
-const faker = require("faker");
-const currentYear = new Date().getFullYear();
-const people = faker.helpers.times(100, (n) => {
-  const hireDate = faker.date.between(
-    new Date(currentYear - 16, 0, 1),
-    new Date(currentYear, 0, 1)
-  );
-  const birthdate = faker.date.between(
-    new Date(hireDate.getFullYear() - 18, 0, 1),
-    new Date(hireDate.getFullYear() - 50, 0, 1)
-  );
-  return {
-    employeeId: n + 1,
-    name: {
-      middle: faker.name.firstName(),
-      last: faker.name.lastName(),
-    },
-    birthdate: birthdate,
-    hireDate: hireDate,
-    ssn: faker.random.number({ min: 100000000, max: 999999999 }),
-    gender: faker.random.arrayElement(["male", "female"]),
-    maritalStatus: faker.random.arrayElement(["single", "married", "divorced"]),
-    address: faker.address.streetAddress(),
-    email: faker.internet.email(),
-  };
+
+
+
+
+Should the above code 👆 be on the same document as 👇 this code. If the code above belongs in 'index.js' then where does the code below go? what should the file name be called *.js?
+
+
+import { faker } from "@faker-js/faker";
+import { promises as fs } from "fs";
+
+const createFakeUser = () => {
+id: faker.datatype.uuid(),
+avatar: faker.internet.avatar(),
+firstName: faker.name.firstName(),
+lastName: faker.name.LastName(),
+phrase: faker.hacker.phrase(),
+username: faker.internet.userName(),
 });
-console.log(people);
+
+const users = Array.from({ length: 100 }).map(createFakeUser);
+
+fs.writeFile("users.json", JSON.stringify(users, null, 2), "utf8");
