@@ -1,3 +1,4 @@
+// From - https://www.youtube.com/watch?v=8Dg5qVo53Vw
 import { faker } from "@faker-js/faker";
 /*
 Why import "fs" from "fs" instead of import fs from "fs"?
@@ -10,7 +11,6 @@ import { promises as fs } from "fs";
 
 const createFakeUser = () => {
   return {
-    id: faker.datatype.uuid(),
     fullName: faker.name.fullName(),
     companyName: faker.company.companyName()
     username: faker.internet.userName(),
