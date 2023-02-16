@@ -1,0 +1,11 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("mongodb+srv://mdbdvc0202:m%40a3cXxe4Z!g%40ZX3NiFEMwcAakd9TL6s_nvc8Xx3ZrPDvevezCdTn7AZWEwZt2FxyTGW4WecN47zJJ%40eQURfoR!HR6anYvj9vy9@cluster0.flvez5l.mongodb.net/test")
+}
